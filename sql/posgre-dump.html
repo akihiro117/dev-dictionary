@@ -8,10 +8,11 @@
     </head>
     <body>
         <h2>PostgreSQLでDB定義をsqlファイルに出力する方法</h2>
+        terminalを開いて、以下のコマンドを実行すると、sqlファイルにDB定義を出力できる。
 
-        <pre class="prettyprint lang-terminal">
+        <pre class="prettyprint">
             <code>
-                pg_dump task_schedule &gt; &lt; ファイル名 &gt;.sql
+                pg_dump &lt;DB名&gt; &gt; &lt;ファイル名&gt;.sql
             </code>
         </pre>
     </body>
