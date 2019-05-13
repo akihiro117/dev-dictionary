@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>PostgreSQLのコマンド一覧</title>
+    <!-- コードに色をつけるためのライブラリ。 -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </head>
+  <body>
+    <h2>PostgreSQLのコマンド一覧</h2>
+    
+    ターミナルで
+    <ul>
+      <li>
+        <pre class="prettyprint">
+          <code>
+            psql -U &lt;ユーザ名&gt; -d postgres
+          </code>
+        </pre>
+      </li>
+    </ul>
+    psqlにログイン後
+    <ul>
+      <li>DBに接続
+        <pre class="prettyprint">
+          <code>
+            \c &lt;DB名&gt;
+          </code>
+        </pre>
+      </li>
+      <li>テーブル一覧
+        <pre class="prettyprint">
+          <code>
+            \d
+          </code>
+        </pre>
+      </li>
+      <li>テーブル定義
+        <pre class="prettyprint">
+          <code>
+            \d &lt;テーブル名&gt;
+          </code>
+        </pre>
+      </li>
+      <li>データベース一覧
+        <pre class="prettyprint">
+          <code>
+            \l
+          </code>
+        </pre>
+      </li>
+    </ul>
+  </body>
+</html>
