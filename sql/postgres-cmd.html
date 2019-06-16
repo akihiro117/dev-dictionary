@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>PostgreSQLのコマンド一覧</title>
     <!-- コードに色をつけるためのライブラリ。 -->
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </head>
+
   <body>
     <h2>PostgreSQLのコマンド一覧</h2>
-    
+
     ターミナルで
     <ul>
       <li>
@@ -49,6 +51,51 @@
           </code>
         </pre>
       </li>
+      <li>データベース作成
+        <pre class="prettyprint">
+          <code>
+            CREATE DATABASE &lt; データベース名 &gt;; 
+          </code>
+        </pre>
+      </li>
+      <li>ユーザ作成
+        <pre class="prettyprint">
+          <code>
+            CREATE ROLE &lt;ユーザ名&gt; ENCRYPTED PASSWORD '&lt;パスワード&gt;';
+          </code>
+        </pre>
+      </li>
+      <li>権限付与
+        <pre class="prettyprint">
+          <code>
+            GRANT ALL PRIVILEGES ON DATABASE &lt;データベース名&gt; TO &lt;ロール名&gt;;
+          </code>
+        </pre>
+      </li>
+      <li>データベース切り替え
+        <pre class="prettyprint">
+          <code>
+            \c &lt;データベース名&gt;
+          </code>
+        </pre>
+      </li>
+      <li>自動採番のカラムの設定<br>
+        CREATE文でカラムを設定する時の型にserial型を設定する。<br>
+        &lt;例&gt;
+        <pre class="prettyprint">
+          <code>
+            CREATE TABLE &lt;テーブル名&gt; (&lt;カラム名&gt; serial);
+          </code>
+        </pre>
+      </li>
+      <li>外部キー制約の設定<br>
+        <pre class="prettyprint">
+          <code>
+            CREATE TABLE &lt;テーブル名&gt; (&lt;カラム名&gt; REFERENCES &lt;参照するテーブル名&gt;(&lt;参照するカラム名&gt;));
+          </code>
+        </pre>
+      </li>
     </ul>
   </body>
+
 </html>
