@@ -109,6 +109,14 @@
           </code>
         </pre>
       </li>
+      <li>既存のカラムへの外部キー追加<br>
+        <pre class="prettyprint">
+          <code>
+            ALTER TABLE &lt;テーブル名&gt; ADD FOREIGN KEY (&lt;外部キー制約を追加するカラム&gt;) 
+            REFERENCES &lt;参照先テーブル名&gt; (&lt;参照先カラム名&gt;) ON DELETE CASCADE;
+          </code>
+        </pre>
+      </li>
     </ul>
   </body>
 
