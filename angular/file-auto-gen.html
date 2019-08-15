@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>Angularでのファイル自動生成方法</title>
     <!-- コードに色をつけるためのライブラリ。 -->
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </head>
+
   <body>
     <h2>Angularでのファイル自動生成方法</h2>
     <ul>
@@ -32,7 +34,17 @@
             ng g component &lt;component名&gt;
           </code>
         </pre>
+      <li>service<br>
+        以下のコマンドを実行すると、src/app/&lt;フォルダ名1&gt;/&lt;フォルダ名2&gt;
+        直下に&lt;service名&gt;.service.ts、html、css、spec.tsが作成されます。
+        <pre class="prettyprint">
+          <code>
+            ng g service &lt;フォルダ名1&gt;/&lt;フォルダ名2&gt;/&lt;service名&gt;
+          </code>
+        </pre>
+      </li>
       </li>
     </ul>
   </body>
+
 </html>
