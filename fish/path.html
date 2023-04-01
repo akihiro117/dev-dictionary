@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>fishのpath関連のコマンド</title>
+    <!-- コードに色をつけるためのライブラリ。 -->
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  </head>
+
+  <body>
+    <h2>fishでpathを追加する方法(ユニバーサル変数を使う場合)</h2>
+    以下のコマンドを実行する。
+
+    <pre class="prettyprint">
+      <code>
+        set -U fish_user_paths &lt;追加したいpath&gt; $fish_user_paths
+      </code>
+    </pre>
+
+    <h2>fishでpathを削除する方法(ユニバーサル変数を使う場合)</h2>
+    1. 以下のコマンドで削除したいpathの順番を調べる。
+    <pre class="prettyprint">
+      <code>
+        echo $fish_user_paths | tr " " "\n" | nl
+      </code>
+    </pre>
+
+    結果の例: <br>
+    <pre class="prettyprint">
+      <code>
+        1 /hoge1/bin
+        2 /hoge2/bin
+        2 /hoge3/bin
+      </code>
+    </pre>
+    <br>
+    2. 該当の箇所を削除する。
+    <pre class="prettyprint">
+      <code>
+        set -e -U fish_user_paths[1]
+      </code>
+    </pre>
+
+  </body>
+
+</html>
